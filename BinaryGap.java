@@ -1,6 +1,6 @@
 /*
 	Solution to Codility's Binary Gap Task
-	O(log(N))
+	Average Run Time O(log(N))
 */
 class Solution 
 {
