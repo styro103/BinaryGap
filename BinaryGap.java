@@ -18,7 +18,7 @@ class Solution
 		int cc = 0; //Count
 		
         while (N>0 && N%2==0) //Remove Trailing Zeroes
-            N/=2;
+            N>>=1; //N>>=1 <=> N=N>>1 <=> N=N/2
         while (N>0) //Check Digits
         {
             if (N%2==0) //If Digit is 0
@@ -29,7 +29,7 @@ class Solution
 				cc = 0; //Reset Count
             }
             
-            N/=2; //Set Next Digit to Check
+            N>>=1; //Set Next Digit to Check
         }
         return mc; //Return Max Count
     }
