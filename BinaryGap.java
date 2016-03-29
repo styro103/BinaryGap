@@ -17,11 +17,11 @@ class Solution
         int mc = 0; //Max Count
 		int cc = 0; //Count
 		
-        while (N>0 && N%2==0) //Remove Trailing Zeroes
+        while (N>0 && (N&1)==0) //Remove Trailing Zeroes
             N>>=1; //N>>=1 <=> N=N>>1 <=> N=N/2
         while (N>0) //Check Digits
         {
-            if (N%2==0) //If Digit is 0
+            if ((N&1)==0) //If Digit is 0
                 cc++; //Increment Count
             else if (cc!=0) //Digit is 1, If Count Isn't Zero
             {
